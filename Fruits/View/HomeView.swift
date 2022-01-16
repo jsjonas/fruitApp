@@ -7,31 +7,30 @@
 
 import SwiftUI
 
-struct FruitsView: View {
-    @ObservedObject var viewModel: FruitViewModel 
+struct HomeView: View {
+    @StateObject var viewModel: FruitViewModel
     
     var body: some View {
         NavigationView {
             
             List(viewModel.fruits, id: \.self) { fruit in
                 
-                NavigationLink(destination: FruitDetail(fruit: fruit)){
+                NavigationLink(destination: FruitDetailView(fruit: fruit)){
                     FruitView(fruit: fruit)
-                }.frame(alignment: .center)
-            }
-            .onAppear {
-                self.viewModel.getFruits()
-            }
+                }
+            }.frame(alignment: .center)
+
             .navigationBarTitle("Fruits")
         }
-        
         .navigationViewStyle(StackNavigationViewStyle())
-        
+        .onAppear {
+            self.viewModel.getFruits()
+        }
     }
 }
 
-struct FruitsView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitsView(viewModel: FruitViewModel())
+        HomeView(viewModel: FruitViewModel())
     }
 }

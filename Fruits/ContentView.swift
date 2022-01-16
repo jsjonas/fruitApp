@@ -12,7 +12,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        FruitsView(viewModel: fruitViewModel)
+        HomeView(viewModel: fruitViewModel)
     }
 }
 

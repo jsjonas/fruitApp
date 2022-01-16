@@ -15,15 +15,14 @@ struct FruitModel: Hashable, Decodable {
     
 }
 
-struct FetchedFruits: Hashable, Decodable {
-    var fruits: [FruitModel]
-    
-}
-
-
 extension FruitModel {
     var data: Data {
         let data = try? Data(contentsOf: URL(string: self.image)!)
         return data!
     }
+}
+
+struct FetchedFruits: Hashable, Decodable {
+    var fruits: [FruitModel]
+    
 }

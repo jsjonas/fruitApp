@@ -20,11 +20,15 @@ struct FruitView: View {
                     .scaledToFit()
                     .frame(height: 80)
                 
-                Text(fruit.name)
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(Color.white)
-                    .frame(width: 150, height: 80, alignment: .center)
-                    .background(.black)
+                HStack {
+                    Spacer()
+                    Text(fruit.name)
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(Color.white)
+                        .frame(width: 150, height: 80, alignment: .center)
+                    Spacer()
+                }                    .background(.black)
+
 
             }.cornerRadius(7)
 
