@@ -33,7 +33,6 @@ struct FruitView: View {
             }.cornerRadius(7)
 
         }
-//        .frame(alignment: .center)
 
         
     }

@@ -28,31 +28,7 @@ struct FruitDetailView: View {
                 }
 
 
-                VStack {
-                    Spacer()
-                    
-                    Text(fruit.name)
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-                    Spacer()
-                    
-                    Text(fruit.description)
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-                    Spacer()
-                    
-                    Text("\(fruit.price, specifier: "%.2f")")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-                    Spacer()
-
-                }
+                self.contentDescription
                     .frame(width: geo.size.width, height: geo.size.height/2, alignment: .center)
                 
                     .background(.green)
@@ -79,13 +55,35 @@ extension View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
 }
-struct RoundedCorner: Shape {
 
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
 
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
+extension FruitDetailView {
+    var contentDescription: some View {
+        VStack {
+            Spacer()
+            
+            Text(fruit.name)
+                .font(.title2)
+                .bold()
+                .foregroundColor(.black)
+                .multilineTextAlignment(.center)
+            Spacer()
+            
+            Text(fruit.description)
+                .font(.title2)
+                .bold()
+                .foregroundColor(.black)
+                .multilineTextAlignment(.center)
+            Spacer()
+            
+            Text("\(fruit.price, specifier: "%.2f")")
+                .font(.title2)
+                .bold()
+                .foregroundColor(.black)
+                .multilineTextAlignment(.center)
+            Spacer()
+
+        }
     }
+    
 }

@@ -16,6 +16,7 @@
 		F96A9C5527933565003C428D /* FruitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A9C5427933565003C428D /* FruitView.swift */; };
 		F96A9C5727933AC1003C428D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A9C5627933AC1003C428D /* HomeView.swift */; };
 		F96A9C5927933B7F003C428D /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A9C5827933B7F003C428D /* FruitDetailView.swift */; };
+		F987D94A27994AD4001043BB /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F987D94927994AD4001043BB /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F96A9C5427933565003C428D /* FruitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitView.swift; sourceTree = "<group>"; };
 		F96A9C5627933AC1003C428D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F96A9C5827933B7F003C428D /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
+		F987D94927994AD4001043BB /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,20 @@
 		F96A9C532793354B003C428D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F987D94827994AC5001043BB /* Shapes */,
 				F96A9C5427933565003C428D /* FruitView.swift */,
 				F96A9C5627933AC1003C428D /* HomeView.swift */,
 				F96A9C5827933B7F003C428D /* FruitDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F987D94827994AC5001043BB /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				F987D94927994AD4001043BB /* RoundedCorner.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				F96A9C5527933565003C428D /* FruitView.swift in Sources */,
 				F96A9C4027933178003C428D /* FruitsApp.swift in Sources */,
 				F96A9C5727933AC1003C428D /* HomeView.swift in Sources */,
+				F987D94A27994AD4001043BB /* RoundedCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
